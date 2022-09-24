@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "target": "ES2016",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "strict": true,
+    "lib": ["ESNext", "DOM"],
+    "types": ["node"],
+    "paths": {
+      "@lhook/*": ["packages/*/src"]
+    }
+  },
+  "include": ["packages/*/src", "packages/*/__tests__", "packages/global.d.ts"]
+}

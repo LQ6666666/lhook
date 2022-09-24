@@ -1,0 +1,32 @@
+{
+  "name": "@lhook/boolean",
+  "version": "1.0.0",
+  "description": "@lhook/boolean",
+  "main": "index.js",
+  "module": "dist/boolean.esm-bundler.js",
+  "types": "dist/boolean.d.ts",
+  "unpkg": "dist/boolean.global.js",
+  "sideEffects": false,
+  "buildOptions": {
+    "name": "LHookBoolean",
+    "formats": [
+      "esm-bundler",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  },
+  "dependencies": {
+    "@lhook/document-event": "workspace:^1.0.0",
+    "vue": "^3.2.39"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "hook",
+    "vue-hook"
+  ]
+}

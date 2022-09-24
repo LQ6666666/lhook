@@ -1,0 +1,32 @@
+{
+  "name": "@lhook/click-outside",
+  "version": "1.0.0",
+  "description": "@lhook/click-outside",
+  "main": "index.js",
+  "module": "dist/click-outside.esm-bundler.js",
+  "types": "dist/click-outside.d.ts",
+  "unpkg": "dist/click-outside.global.js",
+  "sideEffects": false,
+  "buildOptions": {
+    "name": "LHookClickOutside",
+    "formats": [
+      "esm-bundler",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  },
+  "dependencies": {
+    "@lhook/document-event": "workspace:^1.0.0",
+    "vue": "^3.2.39"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "hook",
+    "vue-hook"
+  ]
+}
