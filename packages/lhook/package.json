@@ -1,6 +1,6 @@
 {
   "name": "lhook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "collection of vue3 hooks",
   "main": "index.js",
   "module": "dist/lhook.esm-bundler.js",

@@ -1,6 +1,6 @@
 {
-  "name": "lhook",
-  "version": "1.0.0",
+  "private": true,
+  "version": "1.0.1",
   "packageManager": "pnpm@7.12.2",
   "description": "vue3 hooks",
   "main": "index.js",
@@ -8,7 +8,12 @@
     "preinstall": "npx only-allow pnpm",
     "build": "node scripts/build.js"
   },
-  "keywords": ["vue", "vue-hook", "lhook", "hooks"],
+  "keywords": [
+    "vue",
+    "vue-hook",
+    "lhook",
+    "hooks"
+  ],
   "author": "lq",
   "license": "MIT",
   "devDependencies": {
