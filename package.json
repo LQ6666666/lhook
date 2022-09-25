@@ -2,13 +2,13 @@
   "name": "lhook",
   "version": "1.0.0",
   "packageManager": "pnpm@7.12.2",
-  "description": "",
+  "description": "vue3 hooks",
   "main": "index.js",
   "scripts": {
     "build": "node scripts/build.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["vue", "vue-hook", "lhook", "hooks"],
+  "author": "lq",
   "license": "ISC",
   "devDependencies": {
     "@microsoft/api-extractor": "~7.20.0",

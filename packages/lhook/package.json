@@ -1,7 +1,7 @@
 {
   "name": "lhook",
   "version": "1.0.0",
-  "description": "lhook",
+  "description": "vue3 hooks",
   "main": "index.js",
   "module": "dist/lhook.esm-bundler.js",
   "types": "dist/lhook.d.ts",
