@@ -5,6 +5,7 @@
   "description": "vue3 hooks",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "build": "node scripts/build.js"
   },
   "keywords": ["vue", "vue-hook", "lhook", "hooks"],
