@@ -28,5 +28,11 @@
     "vue",
     "hook",
     "vue-hook"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook",
+    "directory": "packages/click-outside"
+  },
+  "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/click-outside"
 }

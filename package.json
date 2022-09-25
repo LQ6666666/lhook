@@ -10,7 +10,7 @@
   },
   "keywords": ["vue", "vue-hook", "lhook", "hooks"],
   "author": "lq",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@microsoft/api-extractor": "~7.20.0",
     "@rollup/plugin-commonjs": "^22.0.2",

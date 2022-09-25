@@ -27,5 +27,11 @@
     "vue",
     "hook",
     "vue-hook"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook",
+    "directory": "packages/document-event"
+  },
+  "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/document-event"
 }

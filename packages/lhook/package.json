@@ -29,5 +29,12 @@
     "vue",
     "hook",
     "vue-hook"
-  ]
+  ],
+  "author": "Li Qi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook"
+  },
+  "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/lhook"
 }
