@@ -1,0 +1,37 @@
+{
+  "name": "@lhook/request",
+  "version": "1.0.0",
+  "description": "@lhook/request",
+  "main": "index.js",
+  "module": "dist/request.esm-bundler.js",
+  "types": "dist/request.d.ts",
+  "unpkg": "dist/request.global.js",
+  "sideEffects": false,
+  "buildOptions": {
+    "name": "LHookRequest",
+    "formats": [
+      "esm-bundler",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  },
+  "dependencies": {
+    "vue": "^3.2.39"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "hook",
+    "vue-hook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook",
+    "directory": "packages/request"
+  },
+  "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/request"
+}

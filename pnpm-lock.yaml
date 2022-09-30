@@ -66,6 +66,12 @@ importers:
       '@lhook/click-outside': link:../click-outside
       '@lhook/document-event': link:../document-event
 
+  packages/request:
+    specifiers:
+      vue: ^3.2.39
+    dependencies:
+      vue: 3.2.39
+
 packages:
 
   /@babel/code-frame/7.18.6:
