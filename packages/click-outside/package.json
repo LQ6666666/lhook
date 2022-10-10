@@ -16,8 +16,13 @@
       "global"
     ]
   },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
   "dependencies": {
-    "@lhook/document-event": "workspace:^1.0.0",
+    "@lhook/document-event": "workspace:^1.0.0"
+  },
+  "devDependencies": {
     "vue": "^3.2.39"
   },
   "files": [

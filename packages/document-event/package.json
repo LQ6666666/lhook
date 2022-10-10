@@ -16,7 +16,10 @@
       "global"
     ]
   },
-  "dependencies": {
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
     "vue": "^3.2.39"
   },
   "files": [
