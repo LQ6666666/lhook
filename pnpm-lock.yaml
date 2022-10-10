@@ -42,7 +42,7 @@ importers:
 
   packages/click-outside:
     specifiers:
-      '@lhook/document-event': workspace:^1.0.0
+      '@lhook/document-event': workspace:^1.0.1
       vue: ^3.2.39
     dependencies:
       '@lhook/document-event': link:../document-event
@@ -57,9 +57,9 @@ importers:
 
   packages/lhook:
     specifiers:
-      '@lhook/boolean': workspace:^1.0.0
-      '@lhook/click-outside': workspace:^1.0.0
-      '@lhook/document-event': workspace:^1.0.0
+      '@lhook/boolean': workspace:^1.0.1
+      '@lhook/click-outside': workspace:^1.0.1
+      '@lhook/document-event': workspace:^1.0.1
       vue: ^3.2.39
     dependencies:
       '@lhook/boolean': link:../boolean
