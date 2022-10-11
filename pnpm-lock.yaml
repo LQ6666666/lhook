@@ -60,11 +60,13 @@ importers:
       '@lhook/boolean': workspace:^1.0.1
       '@lhook/click-outside': workspace:^1.0.1
       '@lhook/document-event': workspace:^1.0.1
+      '@lhook/request': workspace:^1.0.1
       vue: ^3.2.39
     dependencies:
       '@lhook/boolean': link:../boolean
       '@lhook/click-outside': link:../click-outside
       '@lhook/document-event': link:../document-event
+      '@lhook/request': link:../request
     devDependencies:
       vue: 3.2.39
 

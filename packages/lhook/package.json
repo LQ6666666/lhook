@@ -22,7 +22,8 @@
   "dependencies": {
     "@lhook/boolean": "workspace:^1.0.1",
     "@lhook/click-outside": "workspace:^1.0.1",
-    "@lhook/document-event": "workspace:^1.0.1"
+    "@lhook/document-event": "workspace:^1.0.1",
+    "@lhook/request": "workspace:^1.0.1"
   },
   "devDependencies": {
     "vue": "^3.2.39"
