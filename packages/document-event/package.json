@@ -1,6 +1,6 @@
 {
   "name": "@lhook/document-event",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "@lhook/document-event",
   "main": "index.js",
   "module": "dist/document-event.esm-bundler.js",
