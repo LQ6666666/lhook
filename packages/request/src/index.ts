@@ -38,17 +38,13 @@ type RequestReturnType<D, P extends any[]> = {
   readonly loading: Ref<boolean>;
   readonly error?: Ref<Error | undefined>;
   readonly run: (...args: P) => Promise<D>;
-}
+};
 
 export function useRequest<D, P extends any[]>(
   requestFn: Request<D, P>,
   options: RequestOptions<D, P> = {}
 ): RequestReturnType<D, P> {
-  const {
-    manual = false,
-    params = [] as unknown as P,
-    refreshDeps,
-  } = options;
+  const { manual = false, params = [] as unknown as P, refreshDeps } = options;
 
   const state = reactive<RequestResult<D>>({
     data: undefined,
@@ -62,15 +58,15 @@ export function useRequest<D, P extends any[]>(
     const resultPromise = requestFn(...args);
 
     resultPromise
-      .then((resultData) => {
+      .then(resultData => {
         state.data = resultData as UnwrapRef<D>;
 
-        options.onSuccess?.(resultData, args)
+        options.onSuccess?.(resultData, args);
       })
       .catch((error: Error) => {
         state.error = error;
 
-        options.onError?.(error, args)
+        options.onError?.(error, args);
       })
       .finally(() => {
         state.loading = false;
@@ -87,12 +83,14 @@ export function useRequest<D, P extends any[]>(
 
   // 依赖更新
   if (refreshDeps) {
-    watch(refreshDeps, () => {
-      run(...params);
-    },
+    watch(
+      refreshDeps,
+      () => {
+        run(...params);
+      },
       { deep: true }
     );
   }
 
-  return ({ run, ...toRefs(state) }) as const;
+  return { run, ...toRefs(state) } as const;
 }
