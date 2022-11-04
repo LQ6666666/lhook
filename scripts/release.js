@@ -12,24 +12,23 @@ const currentVersion = require("../package.json").version;
 // 获取全部的 package
 const packages = fs
   .readdirSync(path.resolve(__dirname, "../packages"))
-  .filter((p) => !p.endsWith(".ts") && !p.startsWith("."));
+  .filter(p => !p.endsWith(".ts") && !p.startsWith("."));
 
 // 忽略的包
 const skippedPackages = [];
 
 const versionIncrements = ["patch", "minor", "major"];
-const inc = (i) => semver.inc(currentVersion, i);
+const inc = i => semver.inc(currentVersion, i);
 
 // const bin = (name) => path.resolve(__dirname, "../node_modules/.bin/" + name);
 
-const run = (bin, args, opts = {}) =>
-  execa(bin, args, { stdio: "inherit", ...opts });
+const run = (bin, args, opts = {}) => execa(bin, args, { stdio: "inherit", ...opts });
 
 const dryRun = (bin, args, opts = {}) =>
   console.log(chalk.blue(`[dryrun] ${bin} ${args.join(" ")}`), opts);
 
-const getPkgRoot = (pkg) => path.resolve(__dirname, "../packages/" + pkg);
-const step = (msg) => console.log(chalk.cyan(msg));
+const getPkgRoot = pkg => path.resolve(__dirname, "../packages/" + pkg);
+const step = msg => console.log(chalk.cyan(msg));
 
 async function main() {
   let targetVersion = args._[0];
@@ -40,7 +39,7 @@ async function main() {
       type: "select",
       name: "release",
       message: "Select release type",
-      choices: versionIncrements.map((i) => `${i} (${inc(i)})`),
+      choices: versionIncrements.map(i => `${i} (${inc(i)})`)
     });
 
     targetVersion = release.match(/\((.*)\)/)[1];
@@ -55,7 +54,7 @@ async function main() {
   const { yes } = await prompt({
     type: "confirm",
     name: "yes",
-    message: `Releasing v${targetVersion}. Confirm?`,
+    message: `Releasing v${targetVersion}. Confirm?`
   });
 
   if (!yes) {
@@ -100,9 +99,7 @@ async function main() {
   if (skippedPackages.length) {
     console.log(
       chalk.yellow(
-        `The following packages are skipped and NOT published:\n- ${skippedPackages.join(
-          "\n- "
-        )}`
+        `The following packages are skipped and NOT published:\n- ${skippedPackages.join("\n- ")}`
       )
     );
   }
@@ -113,7 +110,7 @@ function updateVersions(version) {
   // 1. update root package.json
   updatePackage(path.resolve(__dirname, ".."), version);
   // 2. update all packages
-  packages.forEach((p) => updatePackage(getPkgRoot(p), version));
+  packages.forEach(p => updatePackage(getPkgRoot(p), version));
 }
 
 function updatePackage(pkgRoot, version) {
@@ -129,14 +126,9 @@ function updateDeps(pkg, depType, version) {
   const deps = pkg[depType];
   if (!deps) return;
 
-  Object.keys(deps).forEach((dep) => {
-    if (
-      dep.startsWith("@lhook") &&
-      packages.includes(dep.replace(/^@lhook\//, ""))
-    ) {
-      console.log(
-        chalk.yellow(`${pkg.name} -> ${depType} -> ${dep}@${version}`)
-      );
+  Object.keys(deps).forEach(dep => {
+    if (dep.startsWith("@lhook") && packages.includes(dep.replace(/^@lhook\//, ""))) {
+      console.log(chalk.yellow(`${pkg.name} -> ${depType} -> ${dep}@${version}`));
       deps[dep] = `workspace:^${version}`;
     }
   });
@@ -156,14 +148,10 @@ async function publishPackage(pkgName, version) {
   step(`Publishing ${pkgName}...`);
 
   try {
-    await run(
-      "pnpm",
-      ["publish", "-r", "--access", "public", "--filter", pkgName],
-      {
-        cwd: pkgRoot,
-        stdio: "pipe",
-      }
-    );
+    await run("pnpm", ["publish", "-r", "--access", "public", "--filter", pkgName], {
+      cwd: pkgRoot,
+      stdio: "pipe"
+    });
     console.log(chalk.green(`Successfully published ${pkgName}@${version}`));
   } catch (e) {
     if (e.stderr.match(/previously published/)) {
@@ -174,7 +162,7 @@ async function publishPackage(pkgName, version) {
   }
 }
 
-main().catch((err) => {
+main().catch(err => {
   updateVersions(currentVersion);
   console.error(err);
 });

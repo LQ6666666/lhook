@@ -7,6 +7,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "lint": "eslint --ext .ts packages/*/{src,__tests__}/**.ts",
+    "lint:fix": "eslint --fix --ext .ts packages/*/{src,__tests__}/**.ts",
     "format": "prettier --write --parser typescript \"packages/**/*.ts\"",
     "release": "node scripts/release.js",
     "preinstall": "npx only-allow pnpm",

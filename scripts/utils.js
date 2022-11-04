@@ -1,7 +1,7 @@
 const fs = require("node:fs");
 const chalk = require("chalk");
 
-const targets = (exports.targets = fs.readdirSync("packages").filter((f) => {
+const targets = (exports.targets = fs.readdirSync("packages").filter(f => {
   if (!fs.statSync(`packages/${f}`).isDirectory()) {
     return false;
   }
@@ -17,7 +17,7 @@ const targets = (exports.targets = fs.readdirSync("packages").filter((f) => {
 // 模糊匹配 target
 exports.fuzzyMatchTarget = (partialTargets, includeAllMatching) => {
   const matched = [];
-  partialTargets.forEach((partialTarget) => {
+  partialTargets.forEach(partialTarget => {
     for (const target of targets) {
       // 匹配到了就退出
       if (target.match(partialTarget)) {
