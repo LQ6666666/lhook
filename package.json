@@ -5,11 +5,21 @@
   "description": "vue3 hooks",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "build": "node scripts/build.js",
     "lint": "eslint --ext .ts packages/*/{src,__tests__}/**.ts",
     "format": "prettier --write --parser typescript \"packages/**/*.ts\"",
-    "release": "node scripts/release.js"
+    "release": "node scripts/release.js",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.ts": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ]
   },
   "keywords": [
     "vue",
@@ -35,6 +45,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "execa": "^5.1.1",
     "fs-extra": "^10.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "minimist": "^1.2.6",
     "prettier": "^2.7.1",
     "rollup": "^2.79.1",

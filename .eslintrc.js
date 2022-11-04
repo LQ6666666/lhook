@@ -1,3 +1,4 @@
+const DOMGlobals = ["window", "document"];
 const NodeGlobals = ["module", "require"];
 
 module.exports = {
@@ -40,6 +41,14 @@ module.exports = {
         "no-restricted-syntax": "off",
         "jest/no-disabled-tests": "error",
         "jest/no-focused-tests": "error"
+      }
+    },
+    // node
+    {
+      files: ["scripts/**", ".eslintrc.js", "rollup.config.js"],
+      rules: {
+        "no-restricted-globals": ["error", ...DOMGlobals],
+        "no-restricted-syntax": "off"
       }
     }
   ]
