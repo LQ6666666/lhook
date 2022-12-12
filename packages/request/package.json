@@ -1,6 +1,6 @@
 {
   "name": "@lhook/request",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "@lhook/request",
   "main": "index.js",
   "module": "dist/request.esm-bundler.js",
