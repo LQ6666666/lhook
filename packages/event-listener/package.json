@@ -1,0 +1,40 @@
+{
+  "name": "@lhook/event-listener",
+  "version": "1.0.2",
+  "description": "@lhook/event-listener",
+  "main": "index.js",
+  "module": "dist/event-listener.esm-bundler.js",
+  "types": "dist/event-listener.d.ts",
+  "unpkg": "dist/runtime-dom.global.js",
+  "sideEffects": false,
+  "buildOptions": {
+    "name": "LHookEventListener",
+    "formats": [
+      "esm-bundler",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "vue": "^3.2.39"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "hook",
+    "vue-hook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook",
+    "directory": "packages/event-listener"
+  },
+  "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/event-listener"
+}

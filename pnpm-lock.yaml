@@ -75,17 +75,25 @@ importers:
     devDependencies:
       vue: 3.2.39
 
+  packages/event-listener:
+    specifiers:
+      vue: ^3.2.39
+    devDependencies:
+      vue: 3.2.39
+
   packages/lhook:
     specifiers:
       '@lhook/boolean': workspace:^1.0.2
       '@lhook/click-outside': workspace:^1.0.2
       '@lhook/document-event': workspace:^1.0.2
+      '@lhook/event-listener': workspace:^1.0.2
       '@lhook/request': workspace:^1.0.2
       vue: ^3.2.39
     dependencies:
       '@lhook/boolean': link:../boolean
       '@lhook/click-outside': link:../click-outside
       '@lhook/document-event': link:../document-event
+      '@lhook/event-listener': link:../event-listener
       '@lhook/request': link:../request
     devDependencies:
       vue: 3.2.39
