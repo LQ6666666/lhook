@@ -112,6 +112,7 @@ function createConfig(format, output, plugins = []) {
   let external = [];
 
   if (isGlobalBuild || isBrowserESMBuild) {
+    external = ["vue"];
   } else {
     // Node / esm-bundler builds.
     external = [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})];
