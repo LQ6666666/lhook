@@ -1,7 +1,7 @@
 {
   "private": true,
   "version": "1.0.3",
-  "packageManager": "pnpm@7.12.2",
+  "packageManager": "pnpm@7.26.3",
   "description": "vue3 hooks",
   "main": "index.js",
   "scripts": {

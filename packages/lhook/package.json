@@ -1,20 +1,26 @@
 {
   "name": "lhook",
   "version": "1.0.3",
-  "description": "collection of vue3 hooks",
-  "main": "index.js",
-  "module": "dist/lhook.esm-bundler.js",
-  "types": "dist/lhook.d.ts",
-  "unpkg": "dist/lhook.global.js",
+  "description": "lhook",
+  "main": "./index.js",
+  "module": "./dist/lhook.esm-bundler.js",
+  "types": "./dist/lhook.d.ts",
+  "unpkg": "./dist/lhook.global.js",
+  "exports": {
+    "import": {
+      "types": "./dist/lhook.d.ts",
+      "default": "./dist/lhook.esm-bundler.js"
+    },
+    "require": {
+      "types": "./dist/lhook.d.ts",
+      "default": "./index.js"
+    }
+  },
   "sideEffects": false,
-  "buildOptions": {
-    "name": "lhook",
-    "formats": [
-      "esm-bundler",
-      "esm-browser",
-      "cjs",
-      "global"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook",
+    "directory": "packages/lhook"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -27,22 +33,17 @@
     "@lhook/event-listener": "workspace:^1.0.3"
   },
   "devDependencies": {
-    "vue": "^3.2.39"
+    "vue": "^3.2.47"
   },
-  "files": [
-    "index.js",
-    "dist"
-  ],
   "keywords": [
     "vue",
     "hook",
     "vue-hook"
   ],
-  "author": "Li Qi",
+  "author": "Qi Li",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LQ6666666/lhook"
+  "bugs": {
+    "url": "https://github.com/LQ6666666/lhook/issues"
   },
   "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/lhook"
 }

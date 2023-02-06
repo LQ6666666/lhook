@@ -45,7 +45,7 @@ module.exports = {
     },
     // node
     {
-      files: ["scripts/**", ".eslintrc.js", "rollup.config.js"],
+      files: ["scripts/**", ".eslintrc.js", "rollup.config.js", "packages/*/index.js"],
       rules: {
         "no-restricted-globals": ["error", ...DOMGlobals],
         "no-restricted-syntax": "off"

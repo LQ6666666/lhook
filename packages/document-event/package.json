@@ -2,10 +2,20 @@
   "name": "@lhook/document-event",
   "version": "1.0.3",
   "description": "@lhook/document-event",
-  "main": "index.js",
-  "module": "dist/document-event.esm-bundler.js",
-  "types": "dist/document-event.d.ts",
-  "unpkg": "dist/runtime-dom.global.js",
+  "main": "./index.js",
+  "module": "./dist/document-event.esm-bundler.js",
+  "types": "./dist/document-event.d.ts",
+  "unpkg": "./dist/document-event.global.js",
+  "exports": {
+    "import": {
+      "types": "./dist/document-event.d.ts",
+      "default": "./dist/document-event.esm-bundler.js"
+    },
+    "require": {
+      "types": "./dist/document-event.d.ts",
+      "default": "./index.js"
+    }
+  },
   "sideEffects": false,
   "buildOptions": {
     "name": "LHookDocumentEvent",
@@ -16,25 +26,26 @@
       "global"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook",
+    "directory": "packages/document-event"
+  },
   "peerDependencies": {
     "vue": "^3.2.0"
   },
   "devDependencies": {
-    "vue": "^3.2.39"
+    "vue": "^3.2.47"
   },
-  "files": [
-    "index.js",
-    "dist"
-  ],
   "keywords": [
     "vue",
     "hook",
     "vue-hook"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LQ6666666/lhook",
-    "directory": "packages/document-event"
+  "author": "Qi Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LQ6666666/lhook/issues"
   },
   "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/document-event"
 }

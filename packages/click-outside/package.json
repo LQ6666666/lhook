@@ -2,10 +2,20 @@
   "name": "@lhook/click-outside",
   "version": "1.0.3",
   "description": "@lhook/click-outside",
-  "main": "index.js",
-  "module": "dist/click-outside.esm-bundler.js",
-  "types": "dist/click-outside.d.ts",
-  "unpkg": "dist/click-outside.global.js",
+  "main": "./index.js",
+  "module": "./dist/click-outside.esm-bundler.js",
+  "types": "./dist/click-outside.d.ts",
+  "unpkg": "./dist/click-outside.global.js",
+  "exports": {
+    "import": {
+      "types": "./dist/click-outside.d.ts",
+      "default": "./dist/click-outside.esm-bundler.js"
+    },
+    "require": {
+      "types": "./dist/click-outside.d.ts",
+      "default": "./index.js"
+    }
+  },
   "sideEffects": false,
   "buildOptions": {
     "name": "LHookClickOutside",
@@ -16,6 +26,11 @@
       "global"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook",
+    "directory": "packages/click-outside"
+  },
   "peerDependencies": {
     "vue": "^3.2.0"
   },
@@ -23,21 +38,17 @@
     "@lhook/document-event": "workspace:^1.0.3"
   },
   "devDependencies": {
-    "vue": "^3.2.39"
+    "vue": "^3.2.47"
   },
-  "files": [
-    "index.js",
-    "dist"
-  ],
   "keywords": [
     "vue",
     "hook",
     "vue-hook"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LQ6666666/lhook",
-    "directory": "packages/click-outside"
+  "author": "Qi Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LQ6666666/lhook/issues"
   },
   "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/click-outside"
 }

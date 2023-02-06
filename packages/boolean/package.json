@@ -2,11 +2,26 @@
   "name": "@lhook/boolean",
   "version": "1.0.3",
   "description": "@lhook/boolean",
-  "main": "index.js",
-  "module": "dist/boolean.esm-bundler.js",
-  "types": "dist/boolean.d.ts",
-  "unpkg": "dist/boolean.global.js",
+  "main": "./index.js",
+  "module": "./dist/boolean.esm-bundler.js",
+  "types": "./dist/boolean.d.ts",
+  "unpkg": "./dist/boolean.global.js",
+  "exports": {
+    "import": {
+      "types": "./dist/boolean.d.ts",
+      "default": "./dist/boolean.esm-bundler.js"
+    },
+    "require": {
+      "types": "./dist/boolean.d.ts",
+      "default": "./index.js"
+    }
+  },
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LQ6666666/lhook",
+    "directory": "packages/boolean"
+  },
   "buildOptions": {
     "name": "LHookBoolean",
     "formats": [
@@ -20,21 +35,17 @@
     "vue": "^3.2.0"
   },
   "devDependencies": {
-    "vue": "^3.2.39"
+    "vue": "^3.2.47"
   },
-  "files": [
-    "index.js",
-    "dist"
-  ],
   "keywords": [
     "vue",
     "hook",
     "vue-hook"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LQ6666666/lhook",
-    "directory": "packages/boolean"
+  "author": "Qi Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LQ6666666/lhook/issues"
   },
   "homepage": "https://github.com/LQ6666666/lhook/tree/main/packages/boolean"
 }
