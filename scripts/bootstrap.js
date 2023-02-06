@@ -43,6 +43,7 @@ files.forEach(shortName => {
           default: "./index.js"
         }
       },
+      files: ["index.js", "dist"],
       sideEffects: false,
       repository: {
         type: "git",
