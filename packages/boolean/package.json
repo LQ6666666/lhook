@@ -1,6 +1,6 @@
 {
   "name": "@lhook/boolean",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "@lhook/boolean",
   "main": "./index.js",
   "module": "./dist/boolean.esm-bundler.js",

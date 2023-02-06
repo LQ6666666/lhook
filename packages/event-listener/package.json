@@ -1,6 +1,6 @@
 {
   "name": "@lhook/event-listener",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "@lhook/event-listener",
   "main": "./index.js",
   "module": "./dist/event-listener.esm-bundler.js",

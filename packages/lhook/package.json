@@ -1,6 +1,6 @@
 {
   "name": "lhook",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "lhook",
   "main": "./index.js",
   "module": "./dist/lhook.esm-bundler.js",
@@ -26,11 +26,11 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@lhook/boolean": "workspace:^1.0.3",
-    "@lhook/click-outside": "workspace:^1.0.3",
-    "@lhook/document-event": "workspace:^1.0.3",
-    "@lhook/request": "workspace:^1.0.3",
-    "@lhook/event-listener": "workspace:^1.0.3"
+    "@lhook/boolean": "workspace:^1.0.4",
+    "@lhook/click-outside": "workspace:^1.0.4",
+    "@lhook/document-event": "workspace:^1.0.4",
+    "@lhook/request": "workspace:^1.0.4",
+    "@lhook/event-listener": "workspace:^1.0.4"
   },
   "devDependencies": {
     "vue": "^3.2.47"

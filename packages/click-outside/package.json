@@ -1,6 +1,6 @@
 {
   "name": "@lhook/click-outside",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "@lhook/click-outside",
   "main": "./index.js",
   "module": "./dist/click-outside.esm-bundler.js",
@@ -35,7 +35,7 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@lhook/document-event": "workspace:^1.0.3"
+    "@lhook/document-event": "workspace:^1.0.4"
   },
   "devDependencies": {
     "vue": "^3.2.47"
