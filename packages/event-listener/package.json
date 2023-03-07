@@ -7,12 +7,11 @@
   "types": "./dist/event-listener.d.ts",
   "unpkg": "./dist/event-listener.global.js",
   "exports": {
-    "import": {
+    ".": {
       "types": "./dist/event-listener.d.ts",
-      "default": "./dist/event-listener.esm-bundler.js"
-    },
-    "require": {
-      "types": "./dist/event-listener.d.ts",
+      "module": "./dist/event-listener.esm-bundler.js",
+      "import": "./dist/event-listener.esm-bundler.js",
+      "require": "./index.js",
       "default": "./index.js"
     }
   },

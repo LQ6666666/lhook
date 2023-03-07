@@ -34,12 +34,11 @@ files.forEach(shortName => {
       types: `./dist/${shortName}.d.ts`,
       unpkg: `./dist/${shortName}.global.js`,
       exports: {
-        import: {
+        ".": {
           types: `./dist/${shortName}.d.ts`,
-          default: `./dist/${shortName}.esm-bundler.js`
-        },
-        require: {
-          types: `./dist/${shortName}.d.ts`,
+          module: `./dist/${shortName}.esm-bundler.js`,
+          import: `./dist/${shortName}.esm-bundler.js`,
+          require: "./index.js",
           default: "./index.js"
         }
       },
@@ -64,7 +63,7 @@ files.forEach(shortName => {
       },
       homepage: `https://github.com/LQ6666666/lhook/tree/main/packages/${shortName}`
     };
-    fs.writeFileSync(pkgPath, JSON.stringify(json, null, 2));
+    fs.writeFileSync(pkgPath, JSON.stringify(json, null, 2) + "\n");
   }
 
   const readmePath = path.join(packagesDir, shortName, `README.md`);

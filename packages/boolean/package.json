@@ -7,12 +7,11 @@
   "types": "./dist/boolean.d.ts",
   "unpkg": "./dist/boolean.global.js",
   "exports": {
-    "import": {
+    ".": {
       "types": "./dist/boolean.d.ts",
-      "default": "./dist/boolean.esm-bundler.js"
-    },
-    "require": {
-      "types": "./dist/boolean.d.ts",
+      "module": "./dist/boolean.esm-bundler.js",
+      "import": "./dist/boolean.esm-bundler.js",
+      "require": "./index.js",
       "default": "./index.js"
     }
   },

@@ -7,12 +7,11 @@
   "types": "./dist/lhook.d.ts",
   "unpkg": "./dist/lhook.global.js",
   "exports": {
-    "import": {
+    ".": {
       "types": "./dist/lhook.d.ts",
-      "default": "./dist/lhook.esm-bundler.js"
-    },
-    "require": {
-      "types": "./dist/lhook.d.ts",
+      "module": "./dist/lhook.esm-bundler.js",
+      "import": "./dist/lhook.esm-bundler.js",
+      "require": "./index.js",
       "default": "./index.js"
     }
   },
@@ -25,6 +24,15 @@
     "type": "git",
     "url": "git+https://github.com/LQ6666666/lhook",
     "directory": "packages/lhook"
+  },
+  "buildOptions": {
+    "name": "LHook",
+    "formats": [
+      "esm-bundler",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
   },
   "peerDependencies": {
     "vue": "^3.2.0"

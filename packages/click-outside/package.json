@@ -7,12 +7,11 @@
   "types": "./dist/click-outside.d.ts",
   "unpkg": "./dist/click-outside.global.js",
   "exports": {
-    "import": {
+    ".": {
       "types": "./dist/click-outside.d.ts",
-      "default": "./dist/click-outside.esm-bundler.js"
-    },
-    "require": {
-      "types": "./dist/click-outside.d.ts",
+      "module": "./dist/click-outside.esm-bundler.js",
+      "import": "./dist/click-outside.esm-bundler.js",
+      "require": "./index.js",
       "default": "./index.js"
     }
   },
